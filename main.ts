@@ -1,13 +1,11 @@
 
-//Seria una clase de tipo Heroe
-type Heroe = {
-    nombre:string,
-    getEdad:() => string
-};
+//Verificar que tipo de datos es el que estamos utilizando
 
-let Iroman:Heroe = {
-    nombre: "Tony",
-    getEdad(){
-        return this.nombre
-    }
-};
+let cosa:any = function () {
+    return null
+}
+
+let cosa1:any = 32
+
+console.log(typeof cosa)
+console.log(typeof cosa1)
