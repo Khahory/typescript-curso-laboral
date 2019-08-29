@@ -1,12 +1,17 @@
-let heroe:string = "Flash";
-
-function imprime_hero():string {
-    return heroe;
+//Parametros por defectos
+function nombreCompleto(
+    nombre:string, apellido:string, capitalizado:boolean = true //Esto es un parametro por defecto
+):string {
+    if (capitalizado){
+        return capitalizar(nombre) +" " +capitalizar(apellido);
+    }else {
+return nombre +" " +apellido;
+}
 }
 
-let activar_senal = function ():string {
-    return "Batisenal activada";
+function capitalizar(palabra:string):string {
+    return palabra.charAt(0).toUpperCase() + palabra.substr(1).toLowerCase();
 }
 
-console.log(imprime_hero());
-console.log(activar_senal());
+let nombre = nombreCompleto("angel", "perez");
+console.log(nombre);
