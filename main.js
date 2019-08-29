@@ -1,13 +1,13 @@
-// Parametros REST
-//Pueden resultar utiles en alguna sobrecarga de metodos
-function nombreCompleto(nombre) {
-    var demasParametros = [];
-    for (var _i = 1; _i < arguments.length; _i++) {
-        demasParametros[_i - 1] = arguments[_i];
-    }
-    return nombre + " " + demasParametros;
+function saludar(nombre) {
+    return nombre;
 }
-var superman = nombreCompleto("Angel", "Peres", "de los Satos");
-var baman = nombreCompleto("Jason");
-console.log(superman);
-console.log(baman);
+function sumar(a, b) {
+    return a + b;
+}
+//Variables tipo funcion
+var miFuncion; //Aplicamos () => return(string, number,etc)
+// parametros si se requieren en la funcion que meteremos en este let
+miFuncion = saludar;
+console.log(miFuncion("angel 2"));
+//miFuncion = sumar(10,30);
+//console.log(miFuncion);
