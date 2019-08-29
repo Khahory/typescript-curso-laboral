@@ -1,6 +1,12 @@
-//Decirle a typescript que me trabaje con este tipo de valor en especifico
-//Convertir de any a other
+let heroe:string = "Flash";
 
-let cualquierValor:any = "Cualquier cosa";
-let largoCadena:number = (<string>cualquierValor).length;
-console.log(largoCadena);
+function imprime_hero():string {
+    return heroe;
+}
+
+let activar_senal = function ():string {
+    return "Batisenal activada";
+}
+
+console.log(imprime_hero());
+console.log(activar_senal());

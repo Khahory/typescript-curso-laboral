@@ -1,5 +1,9 @@
-//Decirle a typescript que me trabaje con este tipo de valor en especifico
-//Convertir de any a other
-var cualquierValor = "Cualquier cosa";
-var largoCadena = cualquierValor.length;
-console.log(largoCadena);
+var heroe = "Flash";
+function imprime_hero() {
+    return heroe;
+}
+var activar_senal = function () {
+    return "Batisenal activada";
+};
+console.log(imprime_hero());
+console.log(activar_senal());
