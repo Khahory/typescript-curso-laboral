@@ -1,16 +1,13 @@
-//Parametros por defectos
-function nombreCompleto(nombre, apellido, capitalizado //Esto es un parametro por defecto
-) {
-    if (capitalizado === void 0) { capitalizado = true; }
-    if (capitalizado) {
-        return capitalizar(nombre) + " " + capitalizar(apellido);
+// Parametros REST
+//Pueden resultar utiles en alguna sobrecarga de metodos
+function nombreCompleto(nombre) {
+    var demasParametros = [];
+    for (var _i = 1; _i < arguments.length; _i++) {
+        demasParametros[_i - 1] = arguments[_i];
     }
-    else {
-        return nombre + " " + apellido;
-    }
+    return nombre + " " + demasParametros;
 }
-function capitalizar(palabra) {
-    return palabra.charAt(0).toUpperCase() + palabra.substr(1).toLowerCase();
-}
-var nombre = nombreCompleto("angel", "perez");
-console.log(nombre);
+var superman = nombreCompleto("Angel", "Peres", "de los Satos");
+var baman = nombreCompleto("Jason");
+console.log(superman);
+console.log(baman);
