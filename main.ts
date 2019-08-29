@@ -1,11 +1,12 @@
 
-//Verificar que tipo de datos es el que estamos utilizando
+//Funciones de flechas (permiten usar el this aunque tenga un setTimeout
+// el this no pierde el contexto)
 
-let cosa:any = function () {
-    return null
+let capitan_america = {
+    nombre: "Hulk",
+    darOrden_hulk:function (name:string) {
+        setTimeout(() => console.log(name +" smash!!!"), 1000);
+    }
 }
 
-let cosa1:any = 32
-
-console.log(typeof cosa)
-console.log(typeof cosa1)
+capitan_america.darOrden_hulk("Angel");
