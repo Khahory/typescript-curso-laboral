@@ -1,8 +1,11 @@
-//Esto es una tupla
 
-let heroe:[string, number] = ["Iroman", 100];
+//Trabajando con enum
 
-console.log(`Mi heroe es: ${heroe[0]} y tiene ${heroe[1]} muertes`);
+enum Volumen {
+    min= 10,
+    medio= 51 ,
+    max = 100
+}
 
-//Esto es un arreglo tipo string
-let amigos:number[] = [1,2,3,4,5,6];
+let audio:number = Volumen.medio;
+console.log("El volumen esta a: "+audio);
