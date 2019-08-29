@@ -1,9 +1,18 @@
-//Funciones de flechas (permiten usar el this aunque tenga un setTimeout
-// el this no pierde el contexto)
-var capitan_america = {
-    nombre: "Hulk",
-    darOrden_hulk: function (name) {
-        setTimeout(function () { return console.log(name + " smash!!!"); }, 1000);
-    }
+//Utilizando el nuevo for of
+var capitan = {
+    nombre: "Escudo",
+    arma: "Droga"
 };
-capitan_america.darOrden_hulk("Angel");
+var iroman = {
+    nombre: "Iron man",
+    arma: "Traje"
+};
+var thor = {
+    nombre: "Thor",
+    arma: "Hacha"
+};
+var avengers = [thor, capitan, iroman];
+for (var _i = 0, avengers_1 = avengers; _i < avengers_1.length; _i++) {
+    var i = avengers_1[_i];
+    console.log(i.nombre, i.arma);
+}

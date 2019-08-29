@@ -1,12 +1,28 @@
+//Utilizando el nuevo for of
 
-//Funciones de flechas (permiten usar el this aunque tenga un setTimeout
-// el this no pierde el contexto)
+type Hero = {
+    nombre:string,
+    arma:string
+};
 
-let capitan_america = {
-    nombre: "Hulk",
-    darOrden_hulk:function (name:string) {
-        setTimeout(() => console.log(name +" smash!!!"), 1000);
-    }
+let capitan:Hero = {
+    nombre: "Escudo",
+    arma: "Droga"
+};
+
+let iroman:Hero = {
+    nombre: "Iron man",
+    arma: "Traje"
+};
+
+let thor:Hero = {
+    nombre: "Thor",
+    arma: "Hacha"
+};
+
+let avengers:Hero[] = [thor, capitan, iroman];
+
+for (let i of avengers){
+    console.log(i.nombre, i.arma);
 }
 
-capitan_america.darOrden_hulk("Angel");
