@@ -1,15 +1,8 @@
-// interface Avenger {
-//     nombre:string;
-//     edad:number;
-// }
-//
-// function desplegar(vengador:Avenger) {
-//     console.log("Desplegando a: " +vengador.nombre +"la edad es: " +vengador.edad)
-// }
-//
-// var thor:Avenger = {
-//   nombre:"Thor",
-//   edad:800
-// };
-//
-// desplegar(thor);
+//Esto es una tupla
+
+let heroe:[string, number] = ["Iroman", 100];
+
+console.log(`Mi heroe es: ${heroe[0]} y tiene ${heroe[1]} muertes`);
+
+//Esto es un arreglo tipo string
+let amigos:number[] = [1,2,3,4,5,6];
