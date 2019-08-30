@@ -1,15 +1,15 @@
-class Avenger {
-    nombre:string = "Sin name";
-    equipo:any = undefined;
-    nombreReal:any = undefined;
-    puedPelear:boolean = false;
 
-    constructor(name:string, team:string){
-        this.nombre = name;
-        this.equipo = team;
+// Clases abtractas, moldes para las clases hijas
+
+abstract class SerVivo {
+    constructor(public nombre:string, public edad:number){
+
     }
 }
 
-let antman:Avenger = new Avenger("Antman", "Capi");
+class Humano extends SerVivo{
 
-console.log(antman);
+}
+
+let persona = new Humano("Angel", 20);
+console.log(persona);
