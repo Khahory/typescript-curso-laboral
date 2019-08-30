@@ -1,10 +1,15 @@
-//Esto sirve para importar namespaces de otros archivos
-/// <reference path="Validacion/Validaciones.ts"/>
-var Main = /** @class */ (function () {
-    function Main() {
-    }
-    Main.prototype.publicar = function () {
-        console.log(Validaciones.numeroValidar);
+System.register(["./Validacion/numeros.js"], function (exports_1, context_1) {
+    "use strict";
+    var numeros_js_1;
+    var __moduleName = context_1 && context_1.id;
+    return {
+        setters: [
+            function (numeros_js_1_1) {
+                numeros_js_1 = numeros_js_1_1;
+            }
+        ],
+        execute: function () {
+            console.log(numeros_js_1.PI);
+        }
     };
-    return Main;
-}());
+});

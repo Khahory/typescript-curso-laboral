@@ -5,7 +5,11 @@
     <title>Title</title>
 </head>
 <body>
-<script src="public/app.js"></script>
+<script src="node_modules/systemjs/dist/system.js"></script>
+<script>
+    System.import('./main.js');
+</script>
+
 <label>
     Hola Angel
 </label>
