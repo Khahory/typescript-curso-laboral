@@ -1,28 +1,15 @@
-//Utilizando el nuevo for of
+class Avenger {
+    nombre:string = "Sin name";
+    equipo:any = undefined;
+    nombreReal:any = undefined;
+    puedPelear:boolean = false;
 
-type Hero = {
-    nombre:string,
-    arma:string
-};
-
-let capitan:Hero = {
-    nombre: "Escudo",
-    arma: "Droga"
-};
-
-let iroman:Hero = {
-    nombre: "Iron man",
-    arma: "Traje"
-};
-
-let thor:Hero = {
-    nombre: "Thor",
-    arma: "Hacha"
-};
-
-let avengers:Hero[] = [thor, capitan, iroman];
-
-for (let i of avengers){
-    console.log(i.nombre, i.arma);
+    constructor(name:string, team:string){
+        this.nombre = name;
+        this.equipo = team;
+    }
 }
 
+let antman:Avenger = new Avenger("Antman", "Capi");
+
+console.log(antman);
