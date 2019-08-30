@@ -1,20 +1,20 @@
-
-//Crear constructores privados, solo llamarlos en su misma clase
-
-class Apocalipsis {
-    static instancia:Apocalipsis;
-    private constructor(public name:string){
-
-    }
-
-    static llamarApocalipsis(){
-        if (!Apocalipsis.instancia){
-            Apocalipsis.instancia = new Apocalipsis("Soy el unico!!!");
-        }
-
-        return Apocalipsis.instancia;
-    }
+interface Persona {
+    nombre:string;
+    llorar(why:string):void;
 }
 
-let real = Apocalipsis.llamarApocalipsis();
-console.log(real);
+function enviarPersona(persona:Persona) {
+    console.log("Se fue: " +persona.nombre);
+};
+
+
+//Creando objeto
+let angel = {
+    nombre: "Angel",
+    llorar(why: string): void {
+        console.log("Esta llorando por: " +why);
+    }
+};
+
+enviarPersona(angel);
+

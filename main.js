@@ -1,15 +1,12 @@
-//Crear constructores privados, solo llamarlos en su misma clase
-var Apocalipsis = /** @class */ (function () {
-    function Apocalipsis(name) {
-        this.name = name;
+function enviarPersona(persona) {
+    console.log("Se fue: " + persona.nombre);
+}
+;
+//Creando objeto
+var angel = {
+    nombre: "Angel",
+    llorar: function (why) {
+        console.log("Esta llorando por: " + why);
     }
-    Apocalipsis.llamarApocalipsis = function () {
-        if (!Apocalipsis.instancia) {
-            Apocalipsis.instancia = new Apocalipsis("Soy el unico!!!");
-        }
-        return Apocalipsis.instancia;
-    };
-    return Apocalipsis;
-}());
-var real = Apocalipsis.llamarApocalipsis();
-console.log(real);
+};
+enviarPersona(angel);
