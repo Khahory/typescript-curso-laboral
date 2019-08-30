@@ -1,0 +1,23 @@
+{
+  "name": "myapp",
+  "version": "1.0.0",
+  "description": "s",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Khahory/typescript-curso-laboral.git"
+  },
+  "author": "ad",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Khahory/typescript-curso-laboral/issues"
+  },
+  "homepage": "https://github.com/Khahory/typescript-curso-laboral#readme",
+  "devDependencies": {
+    "lite-server": "^2.5.4"
+  }
+}
