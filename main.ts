@@ -1,15 +1,20 @@
 
-// Clases abtractas, moldes para las clases hijas
+//Crear constructores privados, solo llamarlos en su misma clase
 
-abstract class SerVivo {
-    constructor(public nombre:string, public edad:number){
+class Apocalipsis {
+    static instancia:Apocalipsis;
+    private constructor(public name:string){
 
+    }
+
+    static llamarApocalipsis(){
+        if (!Apocalipsis.instancia){
+            Apocalipsis.instancia = new Apocalipsis("Soy el unico!!!");
+        }
+
+        return Apocalipsis.instancia;
     }
 }
 
-class Humano extends SerVivo{
-
-}
-
-let persona = new Humano("Angel", 20);
-console.log(persona);
+let real = Apocalipsis.llamarApocalipsis();
+console.log(real);
