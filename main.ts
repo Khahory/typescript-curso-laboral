@@ -1,20 +1,12 @@
-//Interface con clases
 
-interface SerVivo {
-    nombre:string;
-    edad?:number;
-    moverse(como:string):void;
-}
+//Esto sirve para importar namespaces de otros archivos
+/// <reference path="Validacion/Validaciones.ts"/>
 
-class Persona implements SerVivo{
-    nombre:string;
-    moverse(como: string): void {
-        console.log("Me desplazo: " +como);
+class Main {
+    publicar():void{
+        console.log(Validaciones.numeroValidar);
     }
 }
 
-let angel = new Persona();
-angel.nombre = "Angel";
-angel.moverse("corriendo");
-
-console.log(angel);
+let txt = new Main();
+txt.publicar();
