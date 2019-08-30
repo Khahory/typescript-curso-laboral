@@ -1,20 +1,20 @@
-interface Persona {
+//Interface con clases
+
+interface SerVivo {
     nombre:string;
-    llorar(why:string):void;
+    edad?:number;
+    moverse(como:string):void;
 }
 
-function enviarPersona(persona:Persona) {
-    console.log("Se fue: " +persona.nombre);
-};
-
-
-//Creando objeto
-let angel = {
-    nombre: "Angel",
-    llorar(why: string): void {
-        console.log("Esta llorando por: " +why);
+class Persona implements SerVivo{
+    nombre:string;
+    moverse(como: string): void {
+        console.log("Me desplazo: " +como);
     }
-};
+}
 
-enviarPersona(angel);
+let angel = new Persona();
+angel.nombre = "Angel";
+angel.moverse("corriendo");
 
+console.log(angel);

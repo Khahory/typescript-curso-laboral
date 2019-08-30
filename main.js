@@ -1,12 +1,13 @@
-function enviarPersona(persona) {
-    console.log("Se fue: " + persona.nombre);
-}
-;
-//Creando objeto
-var angel = {
-    nombre: "Angel",
-    llorar: function (why) {
-        console.log("Esta llorando por: " + why);
+//Interface con clases
+var Persona = /** @class */ (function () {
+    function Persona() {
     }
-};
-enviarPersona(angel);
+    Persona.prototype.moverse = function (como) {
+        console.log("Me desplazo: " + como);
+    };
+    return Persona;
+}());
+var angel = new Persona();
+angel.nombre = "Angel";
+angel.moverse("corriendo");
+console.log(angel);
