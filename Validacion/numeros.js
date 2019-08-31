@@ -5,7 +5,7 @@ System.register([], function (exports_1, context_1) {
     function restar(num1, num2) {
         return num1 - num2;
     }
-    exports_1("restar", restar);
+    exports_1("default", restar);
     return {
         setters: [],
         execute: function () {
