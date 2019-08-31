@@ -1,3 +1,27 @@
+// Creando clases genericas
+class Cuadrado<T extends number|string>{ //Le estoy diciendo que solo puede aceptar num y str en el generico
+    base:T;
+    altura:T;
+    area():number{
+        return +this.base * +this.altura; //El + es para convertir de str a num (por si viene str)
+    }
+}
+
+let cuadrado = new Cuadrado();
+cuadrado.altura = "10";
+cuadrado.base = 10;
+console.log(cuadrado.area());
+
+let cuadrado2 = new Cuadrado<string|number>(); //Decimos que solo acepte str o num (puede ser util)
+cuadrado2.altura = "10";
+cuadrado2.base = "10";
+console.log(cuadrado.area());
+
+
+
+
+
+
 
 //Creando arreglos genericos
 let familia:Array<string> = ["Mami", "Jason", "Aura"];
