@@ -1,7 +1,10 @@
-import {PI} from "./Validacion/numeros.js";
-import * as textos from "./Validacion/textos.js";
-import numeros from "./Validacion/numeros.js";
 
-console.log(PI);
-console.log(textos.obtenerError(1));
-console.log(numeros(10,100));
+//Creando funciones genericas (Para que puedan reconocer de que tipo de dato es)
+
+function regresar<T>(arg:T) {
+    return arg;
+}
+
+console.log(  regresar("Hola amigos").charAt(2)  );
+console.log(  regresar(10.12421).toFixed(2)  );
+console.log(  regresar(new Date()).getTime()  );
