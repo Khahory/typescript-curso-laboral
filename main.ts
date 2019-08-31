@@ -1,7 +1,16 @@
 
+//Creando arreglos genericos
+let familia:Array<string> = ["Mami", "Jason", "Aura"];
+familia.push("123");
+
+let familia2:string[] = ["Ambio", "Yamilet"]; //Dice el profe que es lo mismo solo que
+// declarado diferente
+
+
+
+
+
 //Creando funciones genericas (Para que puedan reconocer de que tipo de dato es)
-
-
 function regresar<T>(arg:T) {
     return arg;
 }
