@@ -1,6 +1,6 @@
 //Decorador clase normal
 function cinsola(constructor: Function) {
-    console.log(constructor);
+    console.log(constructor); //Aqui podemos usar los parametros que tiene el constructor (this.nombre en prototype)
 }
 
 //Decorador Factory
