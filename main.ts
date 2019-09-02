@@ -1,12 +1,25 @@
-//Crear nuestro decorador para que las funciones no se puedan sobreescribir con booleano
+//Crear nuestro decorador para que las variables no se puedan sobreescribir con booleano
 function editable(esEditable:boolean){
     return function (target: any, nombrePropiedad: string, descriptor: PropertyDescriptor) {
         descriptor.writable = esEditable;
     }
 }
 
+function editableAtributos(esEditable:boolean){
+    return function (target: any, nombrePropiedad: string):any {
+        let descriptor:PropertyDescriptor = {
+            writable:esEditable
+        };
+        return descriptor;
+    }
+}
+
 class Hero {
-    constructor(public nombre:string){};
+    @editableAtributos(true)
+    public nombre:string;
+    constructor(nombre:string){
+        this.nombre = nombre;
+    };
 
     @editable(false)
     plan(){
@@ -15,10 +28,9 @@ class Hero {
 }
 
 let spiderMan = new Hero("Peter");
-spiderMan.plan = function () {
-    console.log("Destruir el mundo");
-}
-spiderMan.plan();
+console.log(spiderMan);
+
+
 
 
 
