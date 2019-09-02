@@ -9,12 +9,19 @@
     <h1>Hola mundo<small> saludos</small></h1>
     <p>Esto es un texto</p>
     <button type="button" id="botAlerta">Click aquí</button>
-
-<script src="node_modules/systemjs/dist/system.js"></script>
+    <script src="node_modules/systemjs/dist/system.js"></script>
 <!--    Importando jquery-->
-<script src="node_modules/jquery/dist/jquery.js"></script>
-<script>
-    System.import('./main.js');
-</script>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+
+    <link rel="stylesheet" href="node_modules/sweetalert2/dist/sweetalert2.css">
+
+    <script type="module">
+        import Swal from 'node_modules/sweetalert2/dist/sweetalert2.js'
+        Swal.fire('hi')
+    </script>
+
+    <script>
+        System.import('./main.js');
+    </script>
 </body>
 </html>
