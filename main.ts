@@ -8,7 +8,7 @@ $(document).ready(function () {
 $('#botAlerta').on("click", function () {
     $("h1")
 
-        .text("Hola desde typescript");
+        .text("Hola desde typescript XD");
 
     // Swal.fire(
     //     'Good job!',
